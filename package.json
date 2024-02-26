@@ -1,0 +1,41 @@
+{
+  "name": "@datavoid/hardhat-plugin",
+  "version": "0.1.0",
+  "description": "Hardhat plugin to deploy your smart contracts via DataVoid Compression Engine across multiple EVM chains while saving on gas fees.",
+  "keywords": [
+    "deployment",
+    "ethereum",
+    "hardhat",
+    "hardhat-plugin",
+    "datavoid"
+  ],
+  "license": "MIT",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "pnpm build"
+  },
+  "files": [
+    "dist/src/",
+    "src/",
+    "LICENSE",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "@types/node": "^20.11.20",
+    "@types/ws": "^8.5.10",
+    "ethers": "^6.11.1",
+    "hardhat": "^2.20.1",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "ethers": "^6.11.0",
+    "hardhat": "^2.20.0"
+  }
+}

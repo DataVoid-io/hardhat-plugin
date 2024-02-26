@@ -1,0 +1,6 @@
+[
+  "function getCreateAddress(address, bytes32) view returns (address addr, uint256 l1GasCost)",
+  "function getCreate2Address(bytes32, uint96) view returns (address addr, uint256 l1GasCost)",
+  "function create(bytes) view returns (address addr)",
+  "function create2(bytes, uint96) view returns (address addr)"
+]
