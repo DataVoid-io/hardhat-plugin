@@ -3,6 +3,7 @@ import { cdeployConfigExtender } from './config'
 import { DatavoidDeployer } from './DatavoidDeployer'
 import { HardhatPluginError } from 'hardhat/plugins'
 import { PLUGIN_NAME } from './constants'
+import './type-extensions'
 
 extendConfig(cdeployConfigExtender)
 
