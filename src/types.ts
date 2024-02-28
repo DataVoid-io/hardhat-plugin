@@ -1,6 +1,4 @@
-import { ethers } from 'ethers'
-
-export type CdeployConfig = {
+export type DatavoidDeployConfig = {
   contract?: string
   constructorArgsPath?: string
   mode: 'create' | 'create2'
@@ -9,10 +7,4 @@ export type CdeployConfig = {
   networks: string[]
   rpcUrls: string[]
   gasLimit: number
-}
-
-export type DeploymentContext = {
-  codeHash: string
-  compressedCode: string
-  wallet: ethers.Wallet
 }

@@ -1,12 +1,19 @@
 import 'hardhat/types/config'
-import { CdeployConfig } from './types'
+import { DatavoidDeployConfig } from './types'
+import { HREDatavoid } from './HREDatavoid'
 
 declare module 'hardhat/types/config' {
   interface HardhatUserConfig {
-    cdeploy?: CdeployConfig
+    dvdeploy?: DatavoidDeployConfig
   }
 
   interface HardhatConfig {
-    cdeploy?: CdeployConfig
+    dvdeploy?: DatavoidDeployConfig
+  }
+}
+
+declare module 'hardhat/types/runtime' {
+  export interface HardhatRuntimeEnvironment {
+    datavoid: HREDatavoid
   }
 }
