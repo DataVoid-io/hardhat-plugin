@@ -38,7 +38,7 @@ With `yarn`:
 yarn add --dev @datavoid/hardhat-plugin @nomicfoundation/hardhat-ethers ethers
 ```
 
-Import the plugin in your `hardhat.networks.ts`:
+Import the plugin in your `hardhat.config.ts`:
 
 ```ts
 import '@datavoid/hardhat-plugin'
@@ -59,13 +59,13 @@ Use
 
 All the options are optional.
 
-- mode: `'create'` | `'create2'` (default: `'create'`)
-- salt: 12-byte hex-string (required for mode `create2`)
-- gasLimit: a gas limit (default 1_500_000)
-- value: deploy tx value
-- provider: a custom provider
-- signer: a custor signer
-- verbose: enable internal logs
+- `mode`: `'create'` | `'create2'` (default: `'create'`)
+- `salt`: a 12-byte hex-string (required for mode `create2`)
+- `gasLimit`: a gas limit (default 1_500_000)
+- `value`: a deploy tx value
+- `provider`: a custom provider
+- `signer`: a custom signer
+- `verbose`: enable internal logs
 
 ### Example deploy script
 
@@ -85,6 +85,7 @@ async function main() {
     verbose:  true,
   })
   console.log(`Deployed to ${result.address} with L1 cost ${result.l1Cost}`)
+
   const owner = await result.contract.owner()
   console.log('Deployed with owner:', owner)
 }
