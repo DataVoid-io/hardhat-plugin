@@ -1,6 +1,6 @@
 {
   "name": "@datavoid/hardhat-plugin",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Hardhat plugin to deploy your smart contracts via DataVoid Compression Engine across multiple EVM chains while saving on gas fees.",
   "keywords": [
     "deployment",
